@@ -4,14 +4,18 @@ export default function Card({
   image,
   bgColor,
   handleSetPrevStep,
-  handleSetNextStep
+  handleSetNextStep,
+  displayPrev,
+  displayNext,
 }: {
   title: string;
   description: string;
   image: string;
-  bgColor: string
+  bgColor: string;
   handleSetPrevStep: typeof Function;
   handleSetNextStep: typeof Function;
+  displayPrev: string;
+  displayNext: string;
 }) {
   return (
     <div
@@ -43,13 +47,16 @@ export default function Card({
           <h3>{title}</h3>
           <p>{description}</p>
         </div>
-        <div style={{ marginTop: '1rem', textAlign: 'right' }}>
+        <div style={{ marginTop: '1rem', textAlign: 'right'}}>
           <button
             style={{
               borderRadius: '50%',
               height: '50px',
               width: '50px',
-              marginRight: '10px'
+              backgroundColor: 'white',
+              color: 'black',
+              border: '2px solid black',
+              display: displayPrev
             }}
             onClick={handleSetPrevStep}
           >
@@ -59,7 +66,9 @@ export default function Card({
             style={{
               borderRadius: '50%',
               height: '50px',
-              width: '50px'
+              width: '50px',
+              marginLeft: '10px',
+              display: displayNext
             }}
             onClick={handleSetNextStep}
           >
