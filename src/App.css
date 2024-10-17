@@ -1,5 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
+}
+
+.dots-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dot {
+  font-size: 2rem;
+  margin: 0 0.5rem;
+  color: gray;
+}
+
+.dot.active {
+  color: black;
+  font-size: 2.5rem;
+  font-weight: bold;
 }

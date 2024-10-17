@@ -58,6 +58,8 @@ function App() {
         handleSetPrevStep={handleSetPrevStep}
         displayPrev={(step === 0) ? 'none' : 'inline'}
         displayNext={(step === (tutorialData.length - 1)) ? 'none' : 'inline'}
+        steps={tutorialData}
+        currentStep={step}
         />
     </div>
   )
