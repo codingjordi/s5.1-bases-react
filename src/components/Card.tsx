@@ -47,7 +47,7 @@ export default function Card({
           <h3>{title}</h3>
           <p>{description}</p>
         </div>
-        <div style={{ marginTop: '1rem', textAlign: 'right'}}>
+        <div style={{ marginTop: '1rem', textAlign: 'right' }}>
           <button
             style={{
               borderRadius: '50%',
@@ -56,11 +56,16 @@ export default function Card({
               backgroundColor: 'white',
               color: 'black',
               border: '2px solid black',
-              display: displayPrev
+              display: displayPrev,
+              padding: '10px' // Ajuste de padding
             }}
             onClick={handleSetPrevStep}
           >
-            {'<'}
+            <img
+              src="../public/left-arrow.svg"
+              alt="Paso anterior"
+              style={{ width: '100%', height: '100%' }} // Flecha más grande
+            />
           </button>
           <button
             style={{
@@ -68,11 +73,16 @@ export default function Card({
               height: '50px',
               width: '50px',
               marginLeft: '10px',
-              display: displayNext
+              display: displayNext,
+              padding: '10px' // Ajuste de padding
             }}
             onClick={handleSetNextStep}
           >
-            {'>'}
+            <img
+              src="../public/right-arrow.svg"
+              alt="Siguiente paso"
+              style={{ width: '100%', height: '100%' }}
+            />
           </button>
         </div>
       </div>
