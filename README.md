@@ -1,50 +1,87 @@
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Phrase Navigation React App
 
-Currently, two official plugins are available:
+## 📝 Project Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A React application that allows users to navigate through a series of phrases with an interactive and dynamic interface. The app features forward and backward navigation buttons that update both the displayed phrase and an accompanying image.
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Forward and backward phrase navigation
+- Dynamic image synchronization with current phrase
+- Responsive user interface
+- Simple and intuitive interaction model
 
-- Configure the top-level `parserOptions` property like this:
+## 🛠 Technologies and Dependencies
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### Core Technologies
+- React v18.0
+
+### Prerequisites
+
+- Node.js v22.12.0
+- npm (Node Package Manager)
+
+### Installation Steps
+
+1. Clone the repository
+   ```bash
+   git clone https://github.com/codingjordi/s5.1-bases-react.git
+   ```
+
+2. Navigate to the project directory
+   ```bash
+   cd s5.1-bases-react
+   ```
+
+3. Install dependencies
+   ```bash
+   npm install
+   ```
+
+4. Start the development server
+   ```bash
+   npm start
+   ```
+
+## 📂 Project Structure
+
+```
+s5.1-bases-react/
+├── public/
+│   └── index.html
+├── src/
+│   ├── components/
+│   │   └── (React components)
+│   ├── App.js
+│   └── index.js
+├── package.json
+└── README.md
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## 🧪 Available Scripts
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+| Script | Description |
+|--------|-------------|
+| `start` | Runs the app in development mode |
+| `build` | Builds the app for production |
+| `test` | Launches the test runner |
+| (Additional scripts to be added) |
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📄 License
+
+ISC License
+
+## 👥 Author
+
+Jordi Saperas Castro
