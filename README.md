@@ -1,6 +1,4 @@
-# React + TypeScript + Vite
-
-# Phrase Navigation React App
+# Card Navigation React App
 
 ## 📝 Project Description
 
