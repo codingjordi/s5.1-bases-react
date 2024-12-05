@@ -65,14 +65,13 @@ s5.1-bases-react/
 | `start` | Runs the app in development mode |
 | `build` | Builds the app for production |
 | `test` | Launches the test runner |
-| (Additional scripts to be added) |
 
 
 ## 🤝 Contributing
 
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+3. Commit your changes (`git commit -m 'add-some-amazing-feature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
