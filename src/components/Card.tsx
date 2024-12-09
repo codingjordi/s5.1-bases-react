@@ -24,73 +24,51 @@ export default function Card({
   currentStep: number;
 }) {
   return (
-    <div
-      style={{ 
-        minHeight: '600px',
-        width: '350px',
-        color: 'black',
-        backgroundColor: 'white',
-        borderRadius: '30px',
-        overflow: 'hidden'
-      }}
+    <div 
+      className={`min-h-[600px] w-[350px] text-black bg-white rounded-3xl overflow-hidden`}
     >
-      <div
-        style={{
-          backgroundColor: bgColor,
-          padding: '7rem 0rem',
-          borderRadius: '30px 30px 0 0'
-        }}
+      <div 
+        className={`${bgColor} py-28 rounded-t-3xl`}
+        style={{ backgroundColor: bgColor }} // Añadido estilo en línea para color dinámico
       >
         <img
           src={image}
           alt={title}
-          style={{ width: '100%', height: '200px', objectFit: 'cover' }}
+          className="w-full h-[200px] object-cover"
         />
       </div>
-      <div style={{ padding: '1.5rem 1.2rem' }}>
-        <div style={{ minHeight: '150px' }}>
+      <div className="p-6">
+        <div className="min-h-[150px]">
           <h3 className='text-2xl mb-3'>{title}</h3>
-          <p style={{color: '#292928'}}>{description}</p>
+          <p className='text-[#292928]'>{description}</p>
         </div>
-        <div className='flex justify-between place-items-center mt-2'>
+        <div className='flex justify-between items-center mt-2'>
           <div className='indicator'>
             <Indicator steps={steps} currentStep={currentStep} />
           </div>
-          <div style={{ textAlign: 'right' }}>
+          <div className="flex text-right">
             <button
-              style={{
-                borderRadius: '50%',
-                height: '50px',
-                width: '50px',
-                backgroundColor: 'white',
-                color: 'black',
-                border: '2px solid black',
-                display: displayPrev,
-                padding: '10px'
-              }}
+              className={`rounded-full h-[50px] w-[50px] bg-white text-black border-2 border-black 
+                          flex items-center justify-center p-2.5 
+                          ${displayPrev === 'none' ? 'hidden' : ''}`}
               onClick={handleSetPrevStep}
             >
               <img
                 src="../public/left-arrow.svg"
                 alt="Paso anterior"
-                style={{ width: '100%', height: '100%' }}
+                className="w-full h-full"
               />
             </button>
             <button
-              style={{
-                borderRadius: '50%',
-                height: '50px',
-                width: '50px',
-                marginLeft: '10px',
-                display: displayNext,
-                padding: '10px'
-              }}
+              className={`rounded-full h-[50px] w-[50px] ml-2.5 
+                          flex items-center justify-center p-2.5
+                          ${displayNext === 'none' ? 'hidden' : ''}`}
               onClick={handleSetNextStep}
             >
               <img
                 src="../public/right-arrow.svg"
                 alt="Siguiente paso"
-                style={{ width: '100%', height: '100%' }}
+                className="w-full h-full"
               />
             </button>
           </div>
